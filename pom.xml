@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ua.pp.chuprin</groupId>
+    <artifactId>smssender</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>smssender</name>
+
+    <properties>
+        <java-version>1.6</java-version>
+        <maven.compiler.source>${java-version}</maven.compiler.source>
+        <maven.compiler.target>${java-version}</maven.compiler.target>
+        <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+
+        <maven-jar-plugin.version>2.3.2</maven-jar-plugin.version>
+        <org.slf4j-version>1.5.10</org.slf4j-version>
+        <project-directory>${user.dir}/</project-directory>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>android</module>
+        <module>desktop</module>
+        <module>shared</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>repository-chuprin</id>
+            <name>Chuprin Repository</name>
+            <url>http://maven.chuprin.pp.ua:8080/</url>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
